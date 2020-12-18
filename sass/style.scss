@@ -1,0 +1,56 @@
+$font-primary: 'Open Sans',
+sans-serif;
+
+@import "~vuetify/src/styles/styles.sass";
+
+$fontsize-content: 14px;
+$fontsize-title: 24px;
+$fontsize-logo:36px;
+$fontsize-header:22px;
+$fontsize-nav:20px;
+ 
+
+#app {
+  font-family: $font-primary;
+   font-size:$fontsize-content;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+.title {
+  font: $font-primary !important;
+  font-size: $fontsize-nav !important;
+}
+
+.logo {
+  @extend .title;
+  font-weight: 700 !important;
+  font-size: $fontsize-logo !important;
+}
+
+.text-header {
+  font: $font-primary !important;
+  font-size: $fontsize-header !important;
+  font-weight: 700;
+}
+
+
+.template-title {
+  @extend .title;
+  font-size: $fontsize-content !important;
+}

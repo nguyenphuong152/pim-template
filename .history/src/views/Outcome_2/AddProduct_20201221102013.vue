@@ -1,0 +1,35 @@
+<template>
+  <v-container>
+    <v-card class="ma-1" flat>
+      <v-container class="text-start">
+        <v-row class="align-baseline">
+          <v-col cols="10">
+            <span class="text-header">Add product</span>
+          </v-col>
+          <v-col>
+            <v-row>
+              <v-col class="px-0">
+                <span>Cancel |</span>
+              </v-col>
+              <v-col class="px-0 text-end">
+                <span>Preview</span>
+              </v-col>
+              <v-col>
+                <span>Save</span>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-card>
+    <v-card>
+      <span>BASIC INFORMATION:</span>
+    </v-card>
+  </v-container>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style></style>

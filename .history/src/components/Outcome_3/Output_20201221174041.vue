@@ -1,0 +1,120 @@
+<template>
+  <v-card>
+    <v-card-title>
+      Your products
+    </v-card-title>
+    <v-data-table :headers="headers" :items="desserts">
+      <template v-slot:item.image="{ item }">
+        <v-img
+          lazy-src="https://picsum.photos/id/11/10/6"
+          max-height="150"
+          max-width="250"
+          src="https://picsum.photos/id/11/500/300"
+        ></v-img>
+      </template>
+      <template v-slot:item.actions="{ item }">
+        <v-icon medium class="mr-2" @click="editItem(item)" color="grey">
+          mdi-pencil-outline
+        </v-icon>
+        <v-icon medium @click="deleteItem(item)" color="green">
+          mdi-cloud-upload-outline
+        </v-icon>
+      </template>
+    </v-data-table>
+  </v-card>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      search: "",
+      headers: [
+        {
+          text: "Name",
+          align: "start",
+          sortable: false,
+          value: "name",
+        },
+        { text: "Code", value: "code" },
+        { text: "Hierachy", value: "hierachy" },
+        { text: "Status", value: "status" },
+        { text: "Actions", value: "actions", sortable: false },
+      ],
+      desserts: [
+        {
+          image: "",
+          name: "Frozen Yogurt",
+          code: "PM15900",
+          hierachy: "Shoes/Sandal",
+          status: "PUBLISHED",
+        },
+        {
+          image: "",
+          name: "Ice cream sandwich",
+          code: "IC19000",
+          hierachy: "Tops/Hoodies",
+          status: "DRAFT",
+        },
+        {
+          image: "",
+          name: "Eclair",
+          code: "E50009",
+          hierachy: "Pants/Jeans",
+          status: "DRAFT",
+        },
+        {
+          image: "",
+          name: "Cupcake",
+          code: "CC15889",
+          hierachy: "Mini Skirts",
+          status: "DRAFT",
+        },
+        {
+          image: "",
+          name: "Gingerbread",
+          code: "GB100459",
+          hierachy: "Tops/Hoodies",
+          status: "PUBLISHED",
+        },
+        {
+          image: "",
+          name: "Jelly bean",
+          code: "J111159",
+          hierachy: "Tops/Hoodies",
+          status: "PUBLISHED",
+        },
+        {
+          image: "",
+          name: "Lollipop",
+          code: "L151419",
+          hierachy: "Tops/Hoodies",
+          status: "PUBLISHED",
+        },
+        {
+          image: "",
+          name: "Honeycomb",
+          code: "HC74159",
+          hierachy: "Tops/Hoodies",
+          status: "PUBLISHED",
+        },
+        {
+          image: "",
+          name: "Donut",
+          code: "DD17779",
+          hierachy: "Tops/Hoodies",
+          status: "DRAFT",
+        },
+        {
+          image: "",
+          name: "KitKat",
+          code: "KK20009",
+          hierachy: "Tops/Hoodies",
+          status: "DRAFT",
+        },
+      ],
+    };
+  },
+  methods: {},
+};
+</script>

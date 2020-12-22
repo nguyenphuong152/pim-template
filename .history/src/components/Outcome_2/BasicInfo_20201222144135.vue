@@ -126,7 +126,8 @@
             <v-textarea
               clearable
               clear-icon="mdi-close-circle"
-              value="Describe your product here"
+              label="Text"
+              value="This is clearable text."
             ></v-textarea>
           </v-col>
         </v-row>

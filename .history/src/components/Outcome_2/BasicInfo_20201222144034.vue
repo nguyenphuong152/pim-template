@@ -117,16 +117,15 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="6">
-            <v-container class="py-0 px-16">
-              <span>Description</span>
-            </v-container>
+          <v-col>
+            Description
           </v-col>
           <v-col>
             <v-textarea
               clearable
               clear-icon="mdi-close-circle"
-              value="Describe your product here"
+              label="Text"
+              value="This is clearable text."
             ></v-textarea>
           </v-col>
         </v-row>

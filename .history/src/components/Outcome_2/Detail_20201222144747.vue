@@ -69,7 +69,7 @@
             </v-container>
           </v-col>
           <v-col class="px-0">
-            <v-container class="py-0 px-3">
+            <v-container class="py-0 px-4">
               <v-text-field label="Value" hint="Ex: 10%">% </v-text-field>
             </v-container>
           </v-col>

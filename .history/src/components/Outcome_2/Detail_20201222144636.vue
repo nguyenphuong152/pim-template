@@ -63,17 +63,17 @@
           </v-col>
         </v-row>
         <v-row class="d-flex align-baseline pa-0">
-          <v-col cols="6">
+          <v-col>
             <v-container class="py-0 px-16">
               <span>Max discount</span>
             </v-container>
           </v-col>
           <v-col class="px-0">
-            <v-container class="py-0 px-3">
+            <v-container class="py-0 px-0">
               <v-text-field label="Value" hint="Ex: 10%">% </v-text-field>
             </v-container>
           </v-col>
-          <v-col cols="4"></v-col>
+          <v-col></v-col>
         </v-row>
         <v-row class="d-flex align-baseline">
           <v-col cols="6">

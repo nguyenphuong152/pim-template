@@ -215,19 +215,17 @@
           </v-col>
           <v-col>
             <v-text-field
-              v-model="title"
               placeholder="Title"
               hint="Which combo you want to buy?"
             ></v-text-field>
           </v-col>
         </v-row>
         <v-row class="align-baseline">
-          <v-col cols="6">
+          <v-col>
             <span>Number of selections</span>
           </v-col>
           <v-col>
             <v-text-field
-              v-model="countSelection"
               outlined
               placeholder="Value"
               hint="Ex: 3"
@@ -244,32 +242,6 @@
             style="text-transform:none"
             >Save</v-btn
           >
-        </v-row>
-        <v-row>
-          <v-radio-group>
-            <template v-slot:label>
-              <div>
-                <strong>{{ title }}</strong>
-              </div>
-            </template>
-            <!-- <v-radio value="Google">
-              <template v-slot:label>
-                <div>
-                  Of course it's <strong class="success--text">Google</strong>
-                </div>
-              </template>
-            </v-radio>
-            <v-radio value="Duckduckgo">
-              <template v-slot:label>
-                <div>
-                  Definitely <strong class="primary--text">Duckduckgo</strong>
-                </div>
-              </template>
-            </v-radio> -->
-            <v-radio v-for="(numb, iS) in countSelection" :key="iS">
-              helo
-            </v-radio>
-          </v-radio-group>
         </v-row>
       </v-expansion-panel-content>
     </v-expansion-panel>
@@ -305,9 +277,7 @@ export default {
   data: () => ({
     pid: null,
     newListComponent: [],
-    countSelection: "",
     date: ["1"],
-    title: "",
   }),
   methods: {
     deleteComponent(component) {

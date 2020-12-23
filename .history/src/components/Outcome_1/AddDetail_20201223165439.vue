@@ -248,9 +248,7 @@
         <v-row>
           <v-radio-group>
             <template v-slot:label>
-              <div>
-                <strong>{{ title }}</strong>
-              </div>
+              <div>Your favourite <strong>search engine</strong></div>
             </template>
             <!-- <v-radio value="Google">
               <template v-slot:label>
@@ -307,7 +305,6 @@ export default {
     newListComponent: [],
     countSelection: "",
     date: ["1"],
-    title: "",
   }),
   methods: {
     deleteComponent(component) {

@@ -154,25 +154,13 @@
             <v-icon color="blue">mdi-calendar</v-icon>
           </v-col>
           <v-col>
-            <v-row>
-              <v-btn
-                color="green"
-                style="text-transform:none;font-size:25px"
-                text
-                class="white--text"
-                @click="addDate(index)"
-                >+</v-btn
-              >
-              <v-btn
-                text
-                color="red"
-                style="text-transform:none;font-size:25px"
-                rounded
-                class="white--text"
-                @click="deleteDate(index)"
-                >-</v-btn
-              >
-            </v-row>
+            <v-btn
+              color="green"
+              style="text-transform:none"
+              rounded
+              @click="addDate(index)"
+              >+</v-btn
+            >
           </v-col>
         </v-row>
         <v-row>
@@ -184,92 +172,6 @@
             style="text-transform:none"
             >Save</v-btn
           >
-        </v-row>
-      </v-expansion-panel-content>
-    </v-expansion-panel>
-    <v-expansion-panel
-      v-for="(item, idSelect) in this.selectComponent"
-      :key="idSelect"
-    >
-      <v-expansion-panel-header disable-icon-rotate value>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-          <v-icon color="red" @click="deleteComponent(item)">
-            mdi-delete-outline
-          </v-icon>
-        </template>
-        <template>
-          <v-row no-gutters>
-            <v-col cols="4">
-              <span>Select</span>
-            </v-col>
-          </v-row>
-        </template>
-      </v-expansion-panel-header>
-      <v-expansion-panel-content>
-        <v-row class="align-baseline">
-          <v-col>
-            <span>Title</span>
-          </v-col>
-          <v-col>
-            <v-text-field
-              v-model="title"
-              placeholder="Title"
-              hint="Which combo you want to buy?"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row class="align-baseline">
-          <v-col cols="6">
-            <span>Number of selections</span>
-          </v-col>
-          <v-col>
-            <v-text-field
-              v-model="countSelection"
-              outlined
-              placeholder="Value"
-              hint="Ex: 3"
-            ></v-text-field>
-          </v-col>
-          <v-col></v-col>
-        </v-row>
-        <v-row>
-          <v-spacer></v-spacer>
-          <v-btn
-            @click="collapsePanel()"
-            outlined
-            color="blue"
-            style="text-transform:none"
-            >Save</v-btn
-          >
-        </v-row>
-        <v-row>
-          <v-radio-group>
-            <template v-slot:label>
-              <div>
-                <strong>{{ title }}</strong>
-              </div>
-            </template>
-            <!-- <v-radio value="Google">
-              <template v-slot:label>
-                <div>
-                  Of course it's <strong class="success--text">Google</strong>
-                </div>
-              </template>
-            </v-radio>
-            <v-radio value="Duckduckgo">
-              <template v-slot:label>
-                <div>
-                  Definitely <strong class="primary--text">Duckduckgo</strong>
-                </div>
-              </template>
-            </v-radio> -->
-            <v-radio v-for="(numb, iS) in countSelection" :key="iS">
-              helo
-            </v-radio>
-          </v-radio-group>
         </v-row>
       </v-expansion-panel-content>
     </v-expansion-panel>
@@ -297,17 +199,12 @@ export default {
     dateComponent: function() {
       return this.getListComponent.filter((i) => i.component.name === "Date");
     },
-    selectComponent: function() {
-      return this.getListComponent.filter((i) => i.component.name === "Select");
-    },
   },
 
   data: () => ({
     pid: null,
     newListComponent: [],
-    countSelection: "",
     date: ["1"],
-    title: "",
   }),
   methods: {
     deleteComponent(component) {
@@ -318,12 +215,6 @@ export default {
     },
     addDate(input) {
       this.date.push(input);
-    },
-    deleteDate(input) {
-      this.date.pop(input);
-      if (this.date.length === 0) {
-        this.date.push(1);
-      }
     },
   },
 };

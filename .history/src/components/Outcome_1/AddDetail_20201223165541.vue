@@ -266,7 +266,7 @@
                 </div>
               </template>
             </v-radio> -->
-            <v-radio v-for="(numb, iS) in countSelection" :key="iS">
+            <v-radio v-for="(numb, iS) in countSelection.length" :key="iS">
               helo
             </v-radio>
           </v-radio-group>

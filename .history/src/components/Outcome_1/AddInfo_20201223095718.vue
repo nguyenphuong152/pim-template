@@ -2,33 +2,33 @@
   <v-expansion-panels>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
-        <template>
+        <template v-slot:default="{ open }">
           <v-row no-gutters>
             <v-col cols="4">
               Product name
+            </v-col>
+            <v-col cols="8" class="text--secondary">
+              <v-fade-transition leave-absolute>
+                <span v-if="open" key="0">
+                  Enter a name for your product
+                </span>
+                <span v-else key="1">
+                  {{ trip.name }}
+                </span>
+              </v-fade-transition>
             </v-col>
           </v-row>
         </template>
       </v-expansion-panel-header>
       <v-expansion-panel-content>
-        <v-row class="align-baseline">
-          <v-col>Input</v-col>
-          <v-col> <v-text-field></v-text-field></v-col>
-        </v-row>
+        <v-text-field
+          v-model="trip.name"
+          placeholder="Caribbean Cruise"
+        ></v-text-field>
       </v-expansion-panel-content>
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -43,7 +43,10 @@
             <span>Value</span>
           </v-col>
           <v-col>
-            <v-text-field hint="100.000"></v-text-field>
+            <v-text-field
+              placeholder="Input value"
+              hint="100.000"
+            ></v-text-field>
           </v-col>
         </v-row>
         <v-row class="align-baseline">
@@ -68,11 +71,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -87,7 +85,10 @@
             <span>Value</span>
           </v-col>
           <v-col>
-            <v-text-field hint="100.000"></v-text-field>
+            <v-text-field
+              placeholder="Input value"
+              hint="100.000"
+            ></v-text-field>
           </v-col>
         </v-row>
         <v-row class="align-baseline">
@@ -117,11 +118,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -137,61 +133,6 @@
           </v-col>
           <v-col>
             <v-text-field hint="Ex: piece, pair,.."></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col>
-            <v-container class="pa-0">
-              <v-text-field
-                label="Length"
-                placeholder="70cm"
-                outlined
-              ></v-text-field>
-            </v-container>
-          </v-col>
-          <v-col class="px-0">
-            <v-container class="pa-0">
-              <v-text-field
-                label="Width"
-                placeholder="50cm"
-                outlined
-              ></v-text-field>
-            </v-container>
-          </v-col>
-          <v-col>
-            <v-container class="pa-0">
-              <v-text-field
-                label="Height"
-                placeholder="10cm"
-                outlined
-              ></v-text-field>
-            </v-container>
-          </v-col>
-        </v-row>
-      </v-expansion-panel-content>
-    </v-expansion-panel>
-    <v-expansion-panel>
-      <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
-        <template>
-          <v-row no-gutters>
-            <v-col cols="4">
-              Description
-            </v-col>
-          </v-row>
-        </template>
-      </v-expansion-panel-header>
-      <v-expansion-panel-content>
-        <v-row class="align-baseline">
-          <v-col>
-            <span>Input</span>
-          </v-col>
-          <v-col>
-            <v-text-field hint="Ex: This is so beautiful"></v-text-field>
           </v-col>
         </v-row>
       </v-expansion-panel-content>

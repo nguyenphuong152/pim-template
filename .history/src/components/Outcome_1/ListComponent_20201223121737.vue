@@ -60,7 +60,8 @@ export default {
   },
   methods: {
     addComponent(item) {
-      this.$store.dispatch("addComponentToList", { component: item });
+      this.$store.dispatch("addComponentToList", item);
+      console.log(item);
     },
   },
 };

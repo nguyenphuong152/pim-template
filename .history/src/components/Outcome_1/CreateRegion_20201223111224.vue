@@ -2,7 +2,7 @@
   <v-card height="100%" flat>
     <v-row>
       <v-col cols="3" class="py-0">
-        <ListComponent />
+        <ListComponent @sendComponent="getComponent" />
       </v-col>
       <v-col class="text-start pa-0" cols="8">
         <v-row class="d-flex align-baseline">
@@ -34,7 +34,7 @@
           can choose component on the left to customize your product detail
           information</span
         >
-        <AddDetail />
+        <AddDetail :newComponent="this.mComponent" />
       </v-col>
     </v-row>
   </v-card>
@@ -52,8 +52,15 @@ export default {
     AddDetail,
   },
   data() {
-    return {};
+    return {
+      mComponent: [],
+    };
   },
-  methods: {},
+  methods: {
+    getComponent(item) {
+      this.mComponent.push(item);
+      console.log(item);
+    },
+  },
 };
 </script>

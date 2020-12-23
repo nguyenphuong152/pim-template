@@ -20,12 +20,12 @@
       </v-expansion-panel-header>
     </v-expansion-panel>
     <v-expansion-panel v-for="(item, i) in this.getListComponent" :key="i">
-      <v-expansion-panel-header disable-icon-rotate>
+      <v-expansion-panel-header>
         <template v-slot:actions>
           <v-icon color="blue">
             mdi-chevron-down
           </v-icon>
-          <v-icon color="red" @click="deleteComponent(item)">
+          <v-icon color="red">
             mdi-delete-outline
           </v-icon>
         </template>
@@ -58,10 +58,6 @@
             <v-text-field placeholder="Value"></v-text-field>
           </v-col>
         </v-row>
-        <v-row>
-          <v-spacer></v-spacer>
-          <v-btn>OK</v-btn>
-        </v-row>
       </v-expansion-panel-content>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -77,10 +73,11 @@ export default {
   data: () => ({
     newListComponent: [],
   }),
-  methods: {
-    deleteComponent(component) {
-      this.$store.dispatch("deleteComponentFromList", component);
-    },
-  },
+  //   this.newListComponent = this.getListComponent.map((item) => {
+  //   return {
+  //     type: item.name,
+  //     name: "",
+  //   };
+  // })),
 };
 </script>

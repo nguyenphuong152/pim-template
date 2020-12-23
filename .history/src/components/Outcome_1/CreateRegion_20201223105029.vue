@@ -2,7 +2,7 @@
   <v-card height="100%" flat>
     <v-row>
       <v-col cols="3" class="py-0">
-        <ListComponent />
+        <ListComponent @addComponent="addComponent" />
       </v-col>
       <v-col class="text-start pa-0" cols="8">
         <v-row class="d-flex align-baseline">
@@ -52,8 +52,15 @@ export default {
     AddDetail,
   },
   data() {
-    return {};
+    return {
+      mComponent: null,
+    };
   },
-  methods: {},
+  methods: {
+    addComponent(item) {
+      this.mComponent = item;
+      console.log(this.mComponent);
+    },
+  },
 };
 </script>

@@ -4,7 +4,10 @@
       <v-expansion-panel-header>
         <template v-slot:actions>
           <v-icon color="blue">
-            mdi-chevron-down
+            mdi-arrow-down-drop-circle-outline
+          </v-icon>
+          <v-icon color="blue">
+            mdi-check
           </v-icon>
         </template>
         <template>
@@ -24,11 +27,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -68,11 +66,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -117,11 +110,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -172,11 +160,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">

@@ -31,7 +31,7 @@
         <br />
         <span class="blue-grey--text"
           ><span class="red--text">*</span> This is additional information. You
-          can choose component on the left to customize your product detail
+          can choose component in the left to customize your product detail
           information</span
         >
         <AddDetail />
@@ -51,9 +51,5 @@ export default {
     AddInfo,
     AddDetail,
   },
-  data() {
-    return {};
-  },
-  methods: {},
 };
 </script>

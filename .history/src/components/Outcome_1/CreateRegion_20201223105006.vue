@@ -2,7 +2,7 @@
   <v-card height="100%" flat>
     <v-row>
       <v-col cols="3" class="py-0">
-        <ListComponent />
+        <ListComponent @addComponent="addComponent" />
       </v-col>
       <v-col class="text-start pa-0" cols="8">
         <v-row class="d-flex align-baseline">
@@ -44,6 +44,7 @@
 import ListComponent from "../../components/Outcome_1/ListComponent";
 import AddInfo from "../../components/Outcome_1/AddInfo";
 import AddDetail from "../../components/Outcome_1/AddDetail";
+import { component } from "vue/types/umd";
 
 export default {
   components: {
@@ -52,8 +53,15 @@ export default {
     AddDetail,
   },
   data() {
-    return {};
+    return {
+      mComponent: null,
+    };
   },
-  methods: {},
+  methods: {
+    addComponent(item) {
+      this.mComponent = item;
+      console.log(this.mComponent);
+    },
+  },
 };
 </script>

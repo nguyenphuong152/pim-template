@@ -29,11 +29,7 @@
         <br />
         <span class="title">Detail </span>
         <br />
-        <span class="blue-grey--text"
-          ><span class="red--text">*</span> This is additional information. You
-          can choose component on the left to customize your product detail
-          information</span
-        >
+        <span class="blue-grey--text">Additional Information</span>
         <AddDetail />
       </v-col>
     </v-row>
@@ -51,9 +47,5 @@ export default {
     AddInfo,
     AddDetail,
   },
-  data() {
-    return {};
-  },
-  methods: {},
 };
 </script>

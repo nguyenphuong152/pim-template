@@ -19,20 +19,13 @@
         </template>
       </v-expansion-panel-header>
     </v-expansion-panel>
-    <v-expansion-panel v-for="(item, i) in this.getListComponent" :key="i">
-      <v-expansion-panel-header disable-icon-rotate>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-          <v-icon color="red" @click="deleteComponent(item)">
-            mdi-delete-outline
-          </v-icon>
-        </template>
+    <v-expansion-panel v-for="(item, i) in this.newListComponent" :key="i">
+      <v-expansion-panel-header>
         <template v-slot:default="{ open }">
           <v-row no-gutters>
             <v-col cols="4">
-              <span>{{ item.name }}</span>
+              <span v-if="item.name === ''">{{ item.type }}</span>
+              <span v-else>{{ item.name }}</span>
             </v-col>
             <v-col cols="8" class="text--secondary">
               <v-fade-transition leave-absolute>
@@ -58,10 +51,6 @@
             <v-text-field placeholder="Value"></v-text-field>
           </v-col>
         </v-row>
-        <v-row>
-          <v-spacer></v-spacer>
-          <v-btn>OK</v-btn>
-        </v-row>
       </v-expansion-panel-content>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -77,10 +66,11 @@ export default {
   data: () => ({
     newListComponent: [],
   }),
-  methods: {
-    deleteComponent(component) {
-      this.$store.dispatch("deleteComponentFromList", component);
-    },
-  },
+  created: (this.newListComponent = this.getListComponent.map((item) => {
+    return {
+      type: item.name,
+      name: "",
+    };
+  })),
 };
 </script>

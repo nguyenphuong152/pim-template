@@ -19,20 +19,12 @@
         </template>
       </v-expansion-panel-header>
     </v-expansion-panel>
-    <v-expansion-panel v-for="(item, i) in this.getListComponent" :key="i">
-      <v-expansion-panel-header disable-icon-rotate>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-          <v-icon color="red" @click="deleteComponent(item)">
-            mdi-delete-outline
-          </v-icon>
-        </template>
+    <v-expansion-panel v-for="(item, i) in this.newComponent" :key="i">
+      <v-expansion-panel-header>
         <template v-slot:default="{ open }">
           <v-row no-gutters>
             <v-col cols="4">
-              <span>{{ item.name }}</span>
+              <span>{{ trip.name }}</span>
             </v-col>
             <v-col cols="8" class="text--secondary">
               <v-fade-transition leave-absolute>
@@ -46,22 +38,10 @@
         </template>
       </v-expansion-panel-header>
       <v-expansion-panel-content>
-        <v-row>
-          <v-col>
-            <v-text-field
-              v-model="item.name"
-              placeholder="Title"
-              hint="Provider"
-            ></v-text-field>
-          </v-col>
-          <v-col>
-            <v-text-field placeholder="Value"></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-spacer></v-spacer>
-          <v-btn>OK</v-btn>
-        </v-row>
+        <v-text-field
+          v-model="trip.name"
+          placeholder="Caribbean Cruise"
+        ></v-text-field>
       </v-expansion-panel-content>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -69,18 +49,16 @@
 
 <script>
 export default {
-  computed: {
-    getListComponent() {
-      return this.$store.getters.listComponent;
-    },
+  props: {
+    newComponent: Object,
   },
   data: () => ({
-    newListComponent: [],
-  }),
-  methods: {
-    deleteComponent(component) {
-      this.$store.dispatch("deleteComponentFromList", component);
+    trip: {
+      name: "",
+      location: null,
+      start: null,
+      end: null,
     },
-  },
+  }),
 };
 </script>

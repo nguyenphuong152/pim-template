@@ -58,10 +58,6 @@
             <v-text-field placeholder="Value"></v-text-field>
           </v-col>
         </v-row>
-        <v-row>
-          <v-spacer></v-spacer>
-          <v-btn>OK</v-btn>
-        </v-row>
       </v-expansion-panel-content>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -79,6 +75,7 @@ export default {
   }),
   methods: {
     deleteComponent(component) {
+      console.log(this.getListComponent);
       this.$store.dispatch("deleteComponentFromList", component);
     },
   },

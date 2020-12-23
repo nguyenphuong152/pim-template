@@ -2,11 +2,6 @@
   <v-expansion-panels>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -18,17 +13,14 @@
       <v-expansion-panel-content>
         <v-row class="align-baseline">
           <v-col>Input</v-col>
-          <v-col> <v-text-field></v-text-field></v-col>
+          <v-col>
+            <v-text-field placeholder="Input value"></v-text-field
+          ></v-col>
         </v-row>
       </v-expansion-panel-content>
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -43,7 +35,10 @@
             <span>Value</span>
           </v-col>
           <v-col>
-            <v-text-field hint="100.000"></v-text-field>
+            <v-text-field
+              placeholder="Input value"
+              hint="100.000"
+            ></v-text-field>
           </v-col>
         </v-row>
         <v-row class="align-baseline">
@@ -68,11 +63,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -87,7 +77,10 @@
             <span>Value</span>
           </v-col>
           <v-col>
-            <v-text-field hint="100.000"></v-text-field>
+            <v-text-field
+              placeholder="Input value"
+              hint="100.000"
+            ></v-text-field>
           </v-col>
         </v-row>
         <v-row class="align-baseline">
@@ -117,11 +110,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -139,44 +127,10 @@
             <v-text-field hint="Ex: piece, pair,.."></v-text-field>
           </v-col>
         </v-row>
-        <v-row>
-          <v-col>
-            <v-container class="pa-0">
-              <v-text-field
-                label="Length"
-                placeholder="70cm"
-                outlined
-              ></v-text-field>
-            </v-container>
-          </v-col>
-          <v-col class="px-0">
-            <v-container class="pa-0">
-              <v-text-field
-                label="Width"
-                placeholder="50cm"
-                outlined
-              ></v-text-field>
-            </v-container>
-          </v-col>
-          <v-col>
-            <v-container class="pa-0">
-              <v-text-field
-                label="Height"
-                placeholder="10cm"
-                outlined
-              ></v-text-field>
-            </v-container>
-          </v-col>
-        </v-row>
       </v-expansion-panel-content>
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -191,7 +145,7 @@
             <span>Input</span>
           </v-col>
           <v-col>
-            <v-text-field hint="Ex: This is so beautiful"></v-text-field>
+            <v-text-field hint="Ex: This is so beautify"></v-text-field>
           </v-col>
         </v-row>
       </v-expansion-panel-content>

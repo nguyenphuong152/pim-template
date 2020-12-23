@@ -51,9 +51,5 @@ export default {
     AddInfo,
     AddDetail,
   },
-  data() {
-    return {};
-  },
-  methods: {},
 };
 </script>

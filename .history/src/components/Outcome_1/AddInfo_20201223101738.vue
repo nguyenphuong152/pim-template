@@ -1,10 +1,10 @@
 <template>
   <v-expansion-panels>
     <v-expansion-panel>
-      <v-expansion-panel-header>
+      <v-expansion-panel-header disable-icon-rotate>
         <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
+          <v-icon color="teal">
+            mdi-check
           </v-icon>
         </template>
         <template>
@@ -24,11 +24,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -68,11 +63,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -117,11 +107,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">
@@ -172,11 +157,6 @@
     </v-expansion-panel>
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <template v-slot:actions>
-          <v-icon color="blue">
-            mdi-chevron-down
-          </v-icon>
-        </template>
         <template>
           <v-row no-gutters>
             <v-col cols="4">

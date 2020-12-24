@@ -6,7 +6,7 @@
         <br />
         <Body @showOutput="showOutput" />
         <br />
-        <Output v-if="show" :id="img" />
+        <Output v-if="show" />
       </v-col>
     </v-row>
   </div>
@@ -26,13 +26,11 @@ export default {
   data() {
     return {
       show: false,
-      img: "",
     };
   },
   methods: {
-    showOutput(imgId) {
+    showOutput() {
       this.show = !this.show;
-      this.img = imgId;
     },
   },
 };

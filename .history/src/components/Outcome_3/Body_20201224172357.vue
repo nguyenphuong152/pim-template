@@ -29,8 +29,7 @@
               :value="value"
               color="blue"
             >
-              {{ value }} % <br />
-              {{ size }}/{{ filesize }}Mb
+              {{ value }} %
             </v-progress-circular>
             <br />
             <span><v-icon>mdi-file-document-outline</v-icon>prod.csv</span>
@@ -56,9 +55,6 @@ export default {
       interval: {},
       value: 0,
       show: false,
-      size: 0,
-      filesize: 500,
-      img: "",
     };
   },
   beforeDestroy() {
@@ -69,21 +65,15 @@ export default {
     reset() {
       this.value = 0;
       this.show = false;
-      this.$emit("showOutput");
     },
     start() {
-      this.img = Math.floor(Math.random() * 10);
       this.show = true;
       this.interval = setInterval(() => {
         if (this.value === 100) {
           clearInterval(this.interval);
-          this.$store.dispatch("generateImage");
-          this.$emit("showOutput");
-        } else {
-          this.value += 10;
-          this.size = (this.value * this.filesize) / 100;
         }
-      }, 200);
+        this.value += 10;
+      }, 1000);
     },
   },
 };

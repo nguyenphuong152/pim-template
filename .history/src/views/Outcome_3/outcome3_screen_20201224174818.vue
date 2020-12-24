@@ -26,13 +26,12 @@ export default {
   data() {
     return {
       show: false,
-      img: "",
+      img: 8,
     };
   },
   methods: {
-    showOutput(imgId) {
+    showOutput() {
       this.show = !this.show;
-      this.img = imgId;
     },
   },
 };

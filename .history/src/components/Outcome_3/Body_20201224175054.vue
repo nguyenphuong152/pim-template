@@ -69,7 +69,7 @@ export default {
     reset() {
       this.value = 0;
       this.show = false;
-      this.$emit("showOutput");
+      this.$emit("showOutput", this.img);
     },
     start() {
       this.img = Math.floor(Math.random() * 10);
@@ -77,8 +77,7 @@ export default {
       this.interval = setInterval(() => {
         if (this.value === 100) {
           clearInterval(this.interval);
-          this.$store.dispatch("generateImage");
-          this.$emit("showOutput");
+          this.$emit("showOutput", this.img);
         } else {
           this.value += 10;
           this.size = (this.value * this.filesize) / 100;

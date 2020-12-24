@@ -6,8 +6,8 @@
     <v-data-table :headers="headers" :items="desserts">
       <template v-slot:item.image>
         <v-img
-          :src="`https://picsum.photos/500/300?image=${id * 5 + 10}`"
-          :lazy-src="`https://picsum.photos/10/6?image=${id * 5 + 10}`"
+          :src="`https://picsum.photos/500/300?image=${this.id * 5 + 10}`"
+          :lazy-src="`https://picsum.photos/10/6?image=${this.id * 5 + 10}`"
           max-height="100"
           max-width="100"
         ></v-img>
@@ -43,9 +43,9 @@
 
 <script>
 export default {
+  props: ["id"],
   data() {
     return {
-      id: 1,
       search: "",
       headers: [
         {
@@ -149,8 +149,5 @@ export default {
     };
   },
   methods: {},
-  created() {
-    this.id = this.$store.getters.generateImage;
-  },
 };
 </script>

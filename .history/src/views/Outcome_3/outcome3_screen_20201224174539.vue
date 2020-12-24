@@ -30,10 +30,13 @@ export default {
     };
   },
   methods: {
-    showOutput(imgId) {
+    showOutput() {
       this.show = !this.show;
-      this.img = imgId;
     },
+  },
+  created() {
+    this.img = Math.floor(Math.random() * 100);
+    console.log(this.img);
   },
 };
 </script>

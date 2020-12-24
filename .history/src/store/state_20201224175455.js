@@ -13,5 +13,5 @@ export default {
   listTemplate: [],
 
   toogleRerenderComponent: 0,
-  generateImage: 1,
+  generateImage: null,
 };

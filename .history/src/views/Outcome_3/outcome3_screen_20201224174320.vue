@@ -6,7 +6,7 @@
         <br />
         <Body @showOutput="showOutput" />
         <br />
-        <Output v-if="show" :id="img" />
+        <Output v-if="show" />
       </v-col>
     </v-row>
   </div>
@@ -30,10 +30,12 @@ export default {
     };
   },
   methods: {
-    showOutput(imgId) {
+    showOutput() {
       this.show = !this.show;
-      this.img = imgId;
     },
+  },
+  created() {
+    this.img = Math.floor(Math.random() * 100);
   },
 };
 </script>

@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Template from "../views/Outcome_1/CreateProductTemplate.vue";
 import Product from "../views/Outcome_2/Outcome_2_screen.vue";
-import AddProduct from "../views/Outcome_2/AddProduct.vue";
+//import AddProduct from "../views/Outcome_2/AddProduct.vue";
 import Import from "../views/Outcome_3/outcome3_screen.vue";
 
 Vue.use(VueRouter);
@@ -30,14 +30,14 @@ const routes = [
       title: "Product",
     },
   },
-  {
-    path: "/addproduct/:name",
-    name: "AddProduct",
-    component: AddProduct,
-    meta: {
-      title: "Add Product",
-    },
-  },
+  // {
+  //   path: "addproduct/:name",
+  //   name: "AddProduct",
+  //   component: AddProduct,
+  //   meta: {
+  //     title: "Add Product",
+  //   },
+  // },
   {
     path: "/import",
     name: "Import",

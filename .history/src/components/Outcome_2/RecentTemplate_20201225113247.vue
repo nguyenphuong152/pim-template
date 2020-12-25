@@ -26,12 +26,7 @@
     </v-container>
     <v-row>
       <v-col v-for="(item, i) in items" :key="i" class="mx-2">
-        <v-card
-          color="#f0f8ff"
-          width="190"
-          height="80"
-          @click="addProduct(item.name)"
-        >
+        <v-card color="#f0f8ff" width="190" height="80" @click="addProduct()">
           <div class="d-flex child-flex justify-space-between">
             <v-row>
               <v-col class="text-start pl-8">
@@ -67,38 +62,69 @@
               <v-icon color="blue-grey"> mdi-chevron-right </v-icon>Show all
             </v-btn>
           </template>
-          <v-card height="100%">
-            <v-card-title>
-              Your template
-              <v-spacer></v-spacer>
-              <v-icon color="red" @click="dialog = false"
-                >mdi-window-close</v-icon
-              >
-            </v-card-title>
+          <v-card>
+            <v-card-title>Your template</v-card-title>
             <v-divider></v-divider>
+            <v-col v-for="(item, i) in items" :key="i"
+              ><v-card color="#f0f8ff">
+                <div class="d-flex flex-no-wrap justify-space-between">
+                  <div>
+                    <v-row>
+                      <v-col class="text-start pl-8">
+                        <span
+                          class="template-title font-weight-bold blue--text"
+                          >{{ item.name }}</span
+                        >
+                        <br />
+                        <span class="font-weight-thin">{{
+                          item.products
+                        }}</span>
+                      </v-col>
+                      <v-col class="text-end" cols="1">
+                        <v-tooltip bottom>
+                          <template v-slot:activator="{ on, attrs }">
+                            <v-icon
+                              color="blue"
+                              size="18"
+                              @click="showAddTemplate()"
+                              v-bind="attrs"
+                              v-on="on"
+                              >mdi-pencil</v-icon
+                            >
+                          </template>
+                          <span>Edit template</span>
+                        </v-tooltip>
 
-            <v-card-text style="height:500px;">
-              <v-col v-for="(item, i) in templates" :key="i"
-                ><v-card color="#f0f8ff" @click="addProduct(item.name)">
-                  <div class="d-flex flex-no-wrap justify-space-between">
-                    <div>
-                      <v-row>
-                        <v-col class="text-start pl-8">
-                          <span
-                            class="template-title font-weight-bold blue--text"
-                            >{{ item.name }}</span
-                          >
-                          <br />
-                          <span class="font-weight-thin">{{
-                            item.products
-                          }}</span>
-                        </v-col>
-                      </v-row>
-                    </div>
+                        <br />
+                        <v-tooltip bottom>
+                          <template v-slot:activator="{ on, attrs }">
+                            <v-icon
+                              color="green"
+                              size="18"
+                              v-bind="attrs"
+                              v-on="on"
+                              >mdi-plus-circle-outline</v-icon
+                            >
+                          </template>
+                          <span>Use this template to add new product</span>
+                        </v-tooltip>
+                      </v-col>
+                    </v-row>
                   </div>
-                </v-card></v-col
-              ></v-card-text
+                </div>
+              </v-card></v-col
             >
+
+            <v-card-text style="height: 300px;"> </v-card-text>
+            <v-divider></v-divider>
+            <v-card-actions>
+              <v-btn color="blue darken-1" text @click="dialog = false">
+                Close
+              </v-btn>
+              <v-btn color="blue darken-1" text @click="dialog = false">
+                Save
+              </v-btn>
+            </v-card-actions>
           </v-card>
         </v-dialog>
       </v-col>
@@ -109,26 +135,7 @@
 <script>
 export default {
   data: () => ({
-    dialog: false,
     items: [
-      {
-        name: "Clothing",
-        products: "12 products in use",
-      },
-      {
-        name: "Food",
-        products: "12 products in use",
-      },
-      {
-        name: "Cosmetics",
-        products: "12 products in use",
-      },
-      {
-        name: "Sport",
-        products: "12 products in use",
-      },
-    ],
-    templates: [
       {
         name: "Clothing",
         products: "12 products in use",
@@ -148,11 +155,8 @@ export default {
     ],
   }),
   methods: {
-    addProduct(text) {
-      this.$router.push({
-        name: "AddProduct",
-        params: { name: text },
-      });
+    addProduct() {
+      this.$router.push({ name: "AddProduct" });
     },
   },
   created() {
@@ -161,7 +165,7 @@ export default {
       var element = {};
       element.name = this.listTemplate[i].name;
       element.products = "Add new product !";
-      this.templates.unshift(element);
+      this.items.push(element);
     }
   },
 };

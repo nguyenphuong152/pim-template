@@ -26,12 +26,7 @@
     </v-container>
     <v-row>
       <v-col v-for="(item, i) in items" :key="i" class="mx-2">
-        <v-card
-          color="#f0f8ff"
-          width="190"
-          height="80"
-          @click="addProduct(item.name)"
-        >
+        <v-card color="#f0f8ff" width="190" height="80" @click="addProduct()">
           <div class="d-flex child-flex justify-space-between">
             <v-row>
               <v-col class="text-start pl-8">
@@ -76,28 +71,25 @@
               >
             </v-card-title>
             <v-divider></v-divider>
-
-            <v-card-text style="height:500px;">
-              <v-col v-for="(item, i) in templates" :key="i"
-                ><v-card color="#f0f8ff" @click="addProduct(item.name)">
-                  <div class="d-flex flex-no-wrap justify-space-between">
-                    <div>
-                      <v-row>
-                        <v-col class="text-start pl-8">
-                          <span
-                            class="template-title font-weight-bold blue--text"
-                            >{{ item.name }}</span
-                          >
-                          <br />
-                          <span class="font-weight-thin">{{
-                            item.products
-                          }}</span>
-                        </v-col>
-                      </v-row>
-                    </div>
+            <v-col v-for="(item, i) in templates" :key="i"
+              ><v-card color="#f0f8ff">
+                <div class="d-flex flex-no-wrap justify-space-between">
+                  <div>
+                    <v-row>
+                      <v-col class="text-start pl-8">
+                        <span
+                          class="template-title font-weight-bold blue--text"
+                          >{{ item.name }}</span
+                        >
+                        <br />
+                        <span class="font-weight-thin">{{
+                          item.products
+                        }}</span>
+                      </v-col>
+                    </v-row>
                   </div>
-                </v-card></v-col
-              ></v-card-text
+                </div>
+              </v-card></v-col
             >
           </v-card>
         </v-dialog>
@@ -148,12 +140,10 @@ export default {
     ],
   }),
   methods: {
-    addProduct(text) {
-      this.$router.push({
-        name: "AddProduct",
-        params: { name: text },
-      });
+    addProduct() {
+      this.$router.push({ name: "AddProduct" });
     },
+    showTemplate() {},
   },
   created() {
     this.listTemplate = this.$store.getters.listTemplate;
@@ -161,7 +151,7 @@ export default {
       var element = {};
       element.name = this.listTemplate[i].name;
       element.products = "Add new product !";
-      this.templates.unshift(element);
+      this.templates.push(element);
     }
   },
 };

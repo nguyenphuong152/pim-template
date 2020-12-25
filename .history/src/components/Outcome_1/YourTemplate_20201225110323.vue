@@ -78,11 +78,12 @@ export default {
   computed: {},
   created() {
     this.listTemplate = this.$store.getters.listTemplate;
+    console.log(this.listTemplate);
     for (var i = 0; i < this.listTemplate.length; i++) {
       var element = {};
       element.name = this.listTemplate[i].name;
-      element.products = "Add new product !";
-      this.items.unshift(element);
+      element.products = "Add new product";
+      this.items.push(element);
     }
   },
 };

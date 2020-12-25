@@ -39,19 +39,22 @@
               <span>{{ item.title }}</span>
             </v-container>
           </v-col>
-          <v-col cols="4" class="px-0">
+          <v-col class="px-0">
+            <!-- <v-container class="py-0 px-3">
+              <v-text-field label="Value"> </v-text-field>
+            </v-container> -->
             <v-menu
-              ref="menu[idDate]"
-              v-model="menu[idDate]"
+              ref="menu"
+              v-model="menu"
               :close-on-content-click="false"
-              :return-value.sync="dateValue[idDate]"
+              :return-value.sync="date"
               transition="scale-transition"
               offset-y
               min-width="290px"
             >
               <template v-slot:activator="{ on, attrs }">
                 <v-text-field
-                  v-model="dateValue[idDate]"
+                  v-model="date"
                   label="Picker in menu"
                   prepend-icon="mdi-calendar"
                   readonly
@@ -59,40 +62,19 @@
                   v-on="on"
                 ></v-text-field>
               </template>
-              <v-date-picker v-model="dateValue[idDate]" no-title scrollable>
-                <v-spacer></v-spacer>
-                <v-btn text color="primary" @click="changeState(idDate)">
-                  Cancel
-                </v-btn>
-                <v-btn
-                  text
-                  color="primary"
-                  @click="$refs.menu[1].save(dateValue[idDate])"
-                >
-                  OK
-                </v-btn>
-              </v-date-picker>
             </v-menu>
+
+            <v-date-picker v-model="date" no-title scrollable>
+              <v-spacer></v-spacer>
+              <v-btn text color="primary" @click="menu = false">
+                Cancel
+              </v-btn>
+              <v-btn text color="primary" @click="$refs.menu.save(date)">
+                OK
+              </v-btn>
+            </v-date-picker>
           </v-col>
           <v-col cols="4"></v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="6">
-            <v-container class="py-0 px-16">
-              <span>{{ template[0].selectComponent.title }}</span>
-            </v-container>
-          </v-col>
-          <v-col>
-            <v-radio-group v-model="radioGroup">
-              <v-radio
-                v-for="(item, idSelect) in template[0].selectComponent
-                  .selectionTitle"
-                :key="idSelect"
-                :label="` ${item}`"
-                :value="n"
-              ></v-radio>
-            </v-radio-group>
-          </v-col>
         </v-row>
         <v-row class="d-flex align-baseline">
           <v-col cols="6">
@@ -156,6 +138,7 @@
 <script>
 export default {
   data: () => ({
+    date: new Date().toISOString().substr(0, 10),
     checkbox: false,
     items: [
       {
@@ -176,8 +159,9 @@ export default {
     selected: [],
     templateName: "",
     template: [],
-    menu: [],
-    dateValue: [],
+    menu: false,
+    modal: false,
+    menu2: false,
   }),
   computed: {
     allSelected() {
@@ -219,22 +203,12 @@ export default {
         return "yellow";
       }
     },
-    changeState(id) {
-      this.menu[id] = false;
-    },
   },
   created() {
     this.templateName = this.$route.params.name;
     this.template = this.$store.getters.listTemplate.filter(
       (i) => i.name === this.templateName
     );
-
-    for (var j = 0; j < this.template[0].dateComponent.length; j++) {
-      let d = new Date().toISOString().substr(0, 10);
-      this.dateValue.push(d);
-      this.menu.push("false");
-      //console.log(this.menu[1]);
-    }
     console.log("template ", this.template);
   },
 };

@@ -15,14 +15,14 @@
         <div class="d-flex flex-no-wrap justify-space-between">
           <div>
             <v-row>
-              <v-col class="text-start pl-8">
+              <v-col class="text-start pl-8" cols="8">
                 <span class="template-title font-weight-bold blue--text">{{
                   item.name
                 }}</span>
                 <br />
                 <span class="font-weight-thin">{{ item.products }}</span>
               </v-col>
-              <v-col class="text-end" cols="1">
+              <v-col class="px-0 text-end">
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon
@@ -78,11 +78,12 @@ export default {
   computed: {},
   created() {
     this.listTemplate = this.$store.getters.listTemplate;
+    console.log(this.listTemplate);
     for (var i = 0; i < this.listTemplate.length; i++) {
       var element = {};
       element.name = this.listTemplate[i].name;
-      element.products = "Add new product !";
-      this.items.unshift(element);
+      element.products = "0 product in use";
+      this.items.push(element);
     }
   },
 };

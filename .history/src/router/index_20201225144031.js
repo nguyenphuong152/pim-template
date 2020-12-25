@@ -23,7 +23,7 @@ const routes = [
     },
   },
   {
-    path: "/product",
+    path: "/product/:template",
     name: "Product",
     component: Product,
     meta: {
@@ -31,11 +31,21 @@ const routes = [
     },
   },
   {
-    path: "/addproduct/:name",
-    name: "AddProduct",
-    component: AddProduct,
+    path: "/product/:template",
+    name: "Product",
+    component: Product,
+    children: [
+      {
+        path: "addproduct",
+        name: "AddProduct",
+        component: AddProduct,
+        meta: {
+          title: "Add Product",
+        },
+      },
+    ],
     meta: {
-      title: "Add Product",
+      title: "Product",
     },
   },
   {

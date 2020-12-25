@@ -190,13 +190,9 @@ export default {
   data: () => ({
     items: ["VND", "USD", "EUR"],
     templateName: "",
-    template: [],
   }),
   created() {
-    this.templateName = this.$route.params.name;
-    this.template = this.$store.getters.listTemplate.filter(
-      (i) => i.name === this.templateName
-    );
+    this.$route.params.id = this.templateName;
   },
 };
 </script>

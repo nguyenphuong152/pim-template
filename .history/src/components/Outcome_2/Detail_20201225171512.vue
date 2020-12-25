@@ -76,24 +76,6 @@
           </v-col>
           <v-col cols="4"></v-col>
         </v-row>
-        <v-row>
-          <v-col cols="6">
-            <v-container class="py-0 px-16">
-              <span>{{ template[0].selectComponent.title }}</span>
-            </v-container>
-          </v-col>
-          <v-col>
-            <v-radio-group v-model="radioGroup">
-              <v-radio
-                v-for="(item, idSelect) in template[0].selectComponent
-                  .selectionTitle"
-                :key="idSelect"
-                :label="` ${item}`"
-                :value="n"
-              ></v-radio>
-            </v-radio-group>
-          </v-col>
-        </v-row>
         <v-row class="d-flex align-baseline">
           <v-col cols="6">
             <v-container class="py-0 px-16">
@@ -220,7 +202,7 @@ export default {
       }
     },
     changeState(id) {
-      this.menu[id] = false;
+      this.menu[id] = true;
     },
   },
   created() {

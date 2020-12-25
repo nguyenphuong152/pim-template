@@ -79,7 +79,7 @@
 
             <v-card-text style="height:500px;">
               <v-col v-for="(item, i) in templates" :key="i"
-                ><v-card color="#f0f8ff" @click="addProduct(item.name)">
+                ><v-card color="#f0f8ff">
                   <div class="d-flex flex-no-wrap justify-space-between">
                     <div>
                       <v-row>
@@ -151,7 +151,7 @@ export default {
     addProduct(text) {
       this.$router.push({
         name: "AddProduct",
-        params: { name: text },
+        params: { name: text.toUpperCase },
       });
     },
   },

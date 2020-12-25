@@ -197,6 +197,7 @@ export default {
     this.template = this.$store.getters.listTemplate.filter(
       (i) => i.name === this.templateName
     );
+    console.log(this.template);
   },
 };
 </script>

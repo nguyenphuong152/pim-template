@@ -82,7 +82,7 @@ export default {
       var element = {};
       element.name = this.listTemplate[i].name;
       element.products = "Add new product !";
-      this.items.unshift(element);
+      this.items.push(element);
     }
   },
 };

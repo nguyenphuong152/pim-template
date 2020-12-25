@@ -8,7 +8,7 @@
           </v-container>
         </v-col>
         <v-col>
-          <span>Template: {{ templateName }}</span>
+          <span>Template: Clothing</span>
         </v-col>
       </v-row>
       <v-container class="px-16 py-0">
@@ -130,56 +130,6 @@
             ></v-textarea>
           </v-col>
         </v-row>
-        <v-row class="d-flex align-baseline pa-0">
-          <v-col>
-            <v-container class="py-0 px-16">
-              <span>Add Images</span>
-            </v-container>
-          </v-col>
-          <v-col cols="6" class="px-0">
-            <v-container class="py-0 px-0">
-              <v-btn color="blue-grey" class="ma-2 white--text">
-                Upload
-                <v-icon right dark>
-                  mdi-cloud-upload
-                </v-icon>
-              </v-btn>
-            </v-container>
-          </v-col>
-        </v-row>
-        <v-row class="d-flex align-baseline">
-          <v-col cols="6">
-            <v-container class="py-0 px-16">
-              Your images
-            </v-container>
-          </v-col>
-          <v-col>
-            <v-row>
-              <v-col v-for="n in 4" :key="n" class="d-flex child-flex">
-                <v-img
-                  :src="`https://picsum.photos/500/300?image=${n * 3 + 10}`"
-                  :lazy-src="`https://picsum.photos/10/6?image=${n * 3 + 10}`"
-                  aspect-ratio="1"
-                  class="grey lighten-2"
-                  width="70"
-                >
-                  <template v-slot:placeholder>
-                    <v-row
-                      class="fill-height ma-0"
-                      align="center"
-                      justify="center"
-                    >
-                      <v-progress-circular
-                        indeterminate
-                        color="grey lighten-5"
-                      ></v-progress-circular>
-                    </v-row>
-                  </template>
-                </v-img>
-              </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
       </v-container>
     </v-card>
   </v-container>
@@ -189,15 +139,7 @@
 export default {
   data: () => ({
     items: ["VND", "USD", "EUR"],
-    templateName: "",
-    template: [],
   }),
-  created() {
-    this.templateName = this.$route.params.name;
-    this.template = this.$store.getters.listTemplate.filter(
-      (i) => i.name === this.templateName
-    );
-  },
 };
 </script>
 

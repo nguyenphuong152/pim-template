@@ -82,17 +82,16 @@
               <span>{{ template[0].selectComponent.title }}</span>
             </v-container>
           </v-col>
-          <v-col>
-            <v-radio-group v-model="radioGroup">
-              <v-radio
-                v-for="(item, idSelect) in template[0].selectComponent
-                  .selectionTitle"
-                :key="idSelect"
-                :label="` ${item}`"
-                :value="n"
-              ></v-radio>
-            </v-radio-group>
-          </v-col>
+        </v-row>
+        <v-row>
+          <v-radio-group v-model="radioGroup">
+            <v-radio
+              v-for="(item, idSelect) in template[0].selectComponent"
+              :key="idSelect"
+              :label="`Radio ${item.selectionTitle[idSelect]}`"
+              :value="n"
+            ></v-radio>
+          </v-radio-group>
         </v-row>
         <v-row class="d-flex align-baseline">
           <v-col cols="6">

@@ -23,19 +23,20 @@ const routes = [
     },
   },
   {
-    path: "/product",
+    path: "/product/:template",
     name: "Product",
-    component: Product,
+    children: [
+      {
+        path: "addproduct",
+        name: "AddProduct",
+        component: AddProduct,
+        meta: {
+          title: "Add Product",
+        },
+      },
+    ],
     meta: {
       title: "Product",
-    },
-  },
-  {
-    path: "/addproduct/:name",
-    name: "AddProduct",
-    component: AddProduct,
-    meta: {
-      title: "Add Product",
     },
   },
   {

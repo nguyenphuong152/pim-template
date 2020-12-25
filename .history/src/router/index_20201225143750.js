@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Template from "../views/Outcome_1/CreateProductTemplate.vue";
-import Product from "../views/Outcome_2/Outcome_2_screen.vue";
+// import Product from "../views/Outcome_2/Outcome_2_screen.vue";
 import AddProduct from "../views/Outcome_2/AddProduct.vue";
 import Import from "../views/Outcome_3/outcome3_screen.vue";
 
@@ -23,19 +23,20 @@ const routes = [
     },
   },
   {
-    path: "/product",
+    path: "/product/:template",
     name: "Product",
-    component: Product,
+    children: [
+      {
+        path: "addproduct",
+        name: "AddProduct",
+        component: AddProduct,
+        meta: {
+          title: "Add Product",
+        },
+      },
+    ],
     meta: {
       title: "Product",
-    },
-  },
-  {
-    path: "/addproduct/:name",
-    name: "AddProduct",
-    component: AddProduct,
-    meta: {
-      title: "Add Product",
     },
   },
   {

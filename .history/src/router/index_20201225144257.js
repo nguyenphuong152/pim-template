@@ -31,7 +31,7 @@ const routes = [
     },
   },
   {
-    path: "/addproduct/:name",
+    path: "addproduct",
     name: "AddProduct",
     component: AddProduct,
     meta: {

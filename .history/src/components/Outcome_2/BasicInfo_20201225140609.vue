@@ -8,7 +8,7 @@
           </v-container>
         </v-col>
         <v-col>
-          <span>Template: {{ templateName }}</span>
+          <span>Template: Clothing</span>
         </v-col>
       </v-row>
       <v-container class="px-16 py-0">
@@ -189,15 +189,7 @@
 export default {
   data: () => ({
     items: ["VND", "USD", "EUR"],
-    templateName: "",
-    template: [],
   }),
-  created() {
-    this.templateName = this.$route.params.name;
-    this.template = this.$store.getters.listTemplate.filter(
-      (i) => i.name === this.templateName
-    );
-  },
 };
 </script>
 

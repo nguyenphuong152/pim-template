@@ -144,11 +144,7 @@
             </v-container>
           </v-col>
         </v-row>
-        <v-row
-          class="d-flex align-baseline"
-          v-for="n in template[0].colorComponent"
-          :key="n"
-        >
+        <v-row class="d-flex align-baseline">
           <v-col cols="6">
             <v-container class="py-0 px-16">
               <span>Colors</span>

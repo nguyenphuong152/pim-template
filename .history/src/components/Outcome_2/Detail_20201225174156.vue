@@ -106,11 +106,7 @@
           </v-col>
           <v-col cols="6" class="px-0">
             <v-container class="py-0 px-0">
-              <v-btn
-                color="blue-grey"
-                class="ma-2 white--text"
-                style="text-transform:none"
-              >
+              <v-btn color="blue-grey" class="ma-2 white--text">
                 Upload
                 <v-icon right dark>
                   mdi-cloud-upload
@@ -144,11 +140,7 @@
             </v-container>
           </v-col>
         </v-row>
-        <v-row
-          class="d-flex align-baseline"
-          v-for="n in template[0].colorComponent"
-          :key="n"
-        >
+        <v-row class="d-flex align-baseline">
           <v-col cols="6">
             <v-container class="py-0 px-16">
               <span>Colors</span>

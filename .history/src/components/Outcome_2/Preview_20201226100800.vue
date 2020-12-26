@@ -4,7 +4,7 @@
       <v-row class="d-flex align-baseline px-16 pt-4">
         <v-col class="px-0">
           <v-container class="px-16 py-0">
-            <span class="title">Preview</span>
+            <span class="title ">Preview</span>
           </v-container>
         </v-col>
         <v-col class="px-0">

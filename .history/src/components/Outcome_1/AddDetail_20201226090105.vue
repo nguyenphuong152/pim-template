@@ -297,9 +297,6 @@
           <v-card-title>
             Save successful
           </v-card-title>
-          <v-card-text>
-            <v-icon large color="green">mdi-check</v-icon></v-card-text
-          >
           <v-card-text class="text-start">
             Do you want to add new product with this template?
           </v-card-text>

@@ -8,8 +8,7 @@
           </v-col>
           <v-col>
             <v-btn
-              color="blue"
-              outlined
+              color="blue-grey"
               class="ma-2 white--text"
               style="textTransform:none"
               @click="start()"
@@ -38,7 +37,7 @@
             <br />
             <v-btn
               style="textTransform:none"
-              color="blue-grey"
+              color="orange"
               text
               @click="reset()"
               >Cancel</v-btn

@@ -41,8 +41,7 @@
           </v-col>
           <v-col cols="4">
             <v-text-field
-              v-model="myInputModel"
-              v-mask="'##/##/####'"
+              v-mask="'##/##/##'"
               hint="Input date. Ex: 26122020"
             ></v-text-field>
           </v-col>
@@ -182,7 +181,6 @@
 <script>
 export default {
   data: () => ({
-    myInputModel: "",
     checkbox: false,
     items: [
       {

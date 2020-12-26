@@ -38,7 +38,7 @@
             <br />
             <v-btn
               style="textTransform:none"
-              color="blue-grey"
+              color="orange"
               text
               @click="reset()"
               >Cancel</v-btn

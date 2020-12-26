@@ -40,7 +40,6 @@
         color="green darken-1"
         style="text-transform:none"
         class="ma-2 white--text px-8"
-        @click="goImport()"
       >
         Save
       </v-btn>
@@ -155,12 +154,7 @@ export default {
       ],
     };
   },
-  methods: {
-    goImport() {
-      // force browser reload
-      location.reload();
-    },
-  },
+  methods: {},
   created() {
     this.id = this.$store.getters.generateImage;
   },

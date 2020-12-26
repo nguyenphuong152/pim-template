@@ -2,13 +2,13 @@
   <v-container class="text-start ma-1 pa-0">
     <v-card flat>
       <v-row class="d-flex align-baseline px-16 pt-4">
-        <v-col class="px-0">
+        <v-col>
           <v-container class="px-16 py-0">
-            <span class="title">Preview</span>
+            <span class="title ">Preview</span>
           </v-container>
         </v-col>
-        <v-col class="px-0">
-          <span>Template: {{ templateName }}</span>
+        <v-col>
+          <span>Template: Clothing</span>
         </v-col>
       </v-row>
       <v-container class="px-16 py-0">
@@ -48,10 +48,7 @@
           <v-col cols="6" class="px-0">
             <v-row>
               <v-container class="py-0 px-0">
-                <v-btn
-                  color="blue-grey "
-                  class="ma-2 white--text"
-                  style="text-transform:none"
+                <v-btn color="blue-grey " class="ma-2 white--text"
                   >Change image</v-btn
                 >
               </v-container>
@@ -81,7 +78,7 @@
                   Intl.NumberFormat().format(price1)
                 }}</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog1" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -126,7 +123,7 @@
               <v-col class="py-0" cols="3">
                 <span class="font-weight-bold">{{ discount2 }}%</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog2" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -183,10 +180,7 @@
           <v-col cols="6" class="px-0">
             <v-row>
               <v-container class="py-0 px-0">
-                <v-btn
-                  color="blue-grey "
-                  class="ma-2 white--text"
-                  style="text-transform:none"
+                <v-btn color="blue-grey " class="ma-2 white--text"
                   >Change image</v-btn
                 >
               </v-container>
@@ -216,7 +210,7 @@
                   Intl.NumberFormat().format(price3)
                 }}</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog3" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -261,7 +255,7 @@
               <v-col class="py-0" cols="3">
                 <span class="font-weight-bold">{{ discount3 }}%</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog4" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -318,10 +312,7 @@
           <v-col cols="6" class="px-0">
             <v-row>
               <v-container class="py-0 px-0">
-                <v-btn
-                  color="blue-grey "
-                  class="ma-2 white--text"
-                  style="text-transform:none"
+                <v-btn color="blue-grey " class="ma-2 white--text"
                   >Change image</v-btn
                 >
               </v-container>
@@ -351,7 +342,7 @@
                   Intl.NumberFormat().format(price3)
                 }}</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog5" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -396,7 +387,7 @@
               <v-col class="py-0" cols="3">
                 <span class="font-weight-bold">{{ discount3 }}%</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog6" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -438,10 +429,11 @@
         </v-row>
       </v-container>
       <v-card-actions>
+        <v-spacer></v-spacer>
         <v-container class="text-center">
           <v-row>
-            <v-col cols="8"></v-col>
-            <v-col>
+            <v-spacer></v-spacer>
+            <v-col class="px-0">
               <v-btn
                 color="#EEEEEE"
                 class="ma-2 blue-grey--text px-8"
@@ -464,31 +456,22 @@
                 </template>
                 <v-card>
                   <v-container>
-                    <v-card-title>Create successfully</v-card-title>
                     <v-icon size="60" color="green"
                       >mdi-cloud-check-outline</v-icon
                     >
-                    <v-card-text class="text-center"
-                      >Product successfully created!</v-card-text
+                    <br />
+                    <span class="text-center"
+                      >Product successfully created</span
                     >
                   </v-container>
+                  <v-card-text> </v-card-text>
                   <v-card-actions>
-                    <v-spacer></v-spacer>
-                    <v-btn
-                      color="#EEEEEE"
-                      @click="goBackEdit()"
-                      class="blue-grey--text px-4"
-                      style="text-transform:none"
-                    >
-                      Cancel
+                    <v-btn color="blue darken-1" text @click="goBackEdit()">
+                      Back to edit
                     </v-btn>
-                    <v-btn
-                      color="blue darken-1"
-                      class="white--text px-4"
-                      style="text-transform:none"
-                      @click="goAddProduct()"
-                    >
-                      Confirm
+                    <v-spacer></v-spacer>
+                    <v-btn color="blue darken-1" text @click="goAddProduct()">
+                      Add new product
                     </v-btn>
                   </v-card-actions>
                 </v-card>
@@ -536,7 +519,6 @@ export default {
     loading: false,
     search: "",
     selected: [],
-    templateName: "",
   }),
   computed: {
     allSelected() {
@@ -580,9 +562,6 @@ export default {
       this.dialog7 = false;
       this.$router.push("Product");
     },
-  },
-  created() {
-    this.templateName = this.$route.params.name;
   },
 };
 </script>

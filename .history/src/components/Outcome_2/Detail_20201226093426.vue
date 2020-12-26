@@ -39,12 +39,8 @@
               <span>{{ item.title }}</span>
             </v-container>
           </v-col>
-          <v-col cols="4">
-            <v-text-field
-              v-model="myInputModel"
-              v-mask="'##/##/####'"
-              hint="Input date. Ex: 26122020"
-            ></v-text-field>
+          <v-col cols="4" class="px-0">
+            <v-text-field hint="Input date. Ex: 26122020"></v-text-field>
           </v-col>
           <v-col cols="4"></v-col>
         </v-row>
@@ -182,7 +178,6 @@
 <script>
 export default {
   data: () => ({
-    myInputModel: "",
     checkbox: false,
     items: [
       {

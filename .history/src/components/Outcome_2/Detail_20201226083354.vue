@@ -39,12 +39,40 @@
               <span>{{ item.title }}</span>
             </v-container>
           </v-col>
-          <v-col cols="4">
-            <v-text-field
-              v-model="myInputModel"
-              v-mask="'##/##/####'"
-              hint="Input date. Ex: 26122020"
-            ></v-text-field>
+          <v-col cols="4" class="px-0">
+            <v-menu
+              ref="menu[idDate]"
+              v-model="menu[idDate]"
+              :close-on-content-click="false"
+              :return-value.sync="dateValue[idDate]"
+              transition="scale-transition"
+              offset-y
+              min-width="290px"
+            >
+              <template v-slot:activator="{ on, attrs }">
+                <v-text-field
+                  v-model="dateValue[idDate]"
+                  label="Picker in menu"
+                  prepend-icon="mdi-calendar"
+                  readonly
+                  v-bind="attrs"
+                  v-on="on"
+                ></v-text-field>
+              </template>
+              <v-date-picker v-model="dateValue[idDate]" no-title scrollable>
+                <v-spacer></v-spacer>
+                <v-btn text color="primary" @click="changeState(idDate)">
+                  Cancel
+                </v-btn>
+                <v-btn
+                  text
+                  color="primary"
+                  @click="$refs.menu[1].save(dateValue[idDate])"
+                >
+                  OK
+                </v-btn>
+              </v-date-picker>
+            </v-menu>
           </v-col>
           <v-col cols="4"></v-col>
         </v-row>
@@ -182,7 +210,6 @@
 <script>
 export default {
   data: () => ({
-    myInputModel: "",
     checkbox: false,
     items: [
       {

@@ -281,7 +281,7 @@
     <br />
     <v-row class="pr-3">
       <v-spacer></v-spacer>
-      <v-dialog v-model="dialog" max-width="400">
+      <v-dialog v-model="dialog" max-width="450">
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             color="blue"
@@ -295,31 +295,26 @@
         </template>
         <v-card>
           <v-card-title>
-            Save successful
+            Notification
           </v-card-title>
-          <v-card-text>
-            <v-icon large color="green">mdi-check</v-icon></v-card-text
-          >
-          <v-card-text class="text-start">
-            Do you want to add new product with this template?
-          </v-card-text>
+          <v-card-text>Your template has been save successfully</v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
-              color="#EEEEEE"
+              color="grey"
               @click="dialog = false"
-              class="blue-grey--text px-8"
+              class="blue--text"
               style="text-transform:none"
             >
-              No
+              Cancel
             </v-btn>
             <v-btn
               color="blue darken-1"
-              class="white--text  px-8"
+              class="white--text"
               @click="dialog = false"
               style="text-transform:none"
             >
-              Yes
+              Use template
             </v-btn>
           </v-card-actions>
         </v-card>

@@ -2,12 +2,12 @@
   <v-container class="text-start ma-1 pa-0">
     <v-card flat>
       <v-row class="d-flex align-baseline px-16 pt-4">
-        <v-col class="px-0">
+        <v-col>
           <v-container class="px-16 py-0">
-            <span class="title">Preview</span>
+            <span class="title ">Preview</span>
           </v-container>
         </v-col>
-        <v-col class="px-0">
+        <v-col>
           <span>Template: {{ templateName }}</span>
         </v-col>
       </v-row>
@@ -57,10 +57,10 @@
               </v-container>
             </v-row>
             <v-row>
-              <v-col class="py-0">
+              <v-col>
                 <span>Color</span>
               </v-col>
-              <v-col class="py-0">
+              <v-col>
                 <span class="font-weight-bold">Red</span>
               </v-col>
             </v-row>
@@ -81,7 +81,7 @@
                   Intl.NumberFormat().format(price1)
                 }}</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog1" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -126,7 +126,7 @@
               <v-col class="py-0" cols="3">
                 <span class="font-weight-bold">{{ discount2 }}%</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog2" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -192,10 +192,10 @@
               </v-container>
             </v-row>
             <v-row>
-              <v-col class="py-0">
+              <v-col>
                 <span>Color</span>
               </v-col>
-              <v-col class="py-0">
+              <v-col>
                 <span class="font-weight-bold">Green</span>
               </v-col>
             </v-row>
@@ -216,7 +216,7 @@
                   Intl.NumberFormat().format(price3)
                 }}</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog3" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -261,7 +261,7 @@
               <v-col class="py-0" cols="3">
                 <span class="font-weight-bold">{{ discount3 }}%</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog4" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -327,10 +327,10 @@
               </v-container>
             </v-row>
             <v-row>
-              <v-col class="py-0">
+              <v-col>
                 <span>Color</span>
               </v-col>
-              <v-col class="py-0">
+              <v-col>
                 <span class="font-weight-bold">Blue</span>
               </v-col>
             </v-row>
@@ -351,7 +351,7 @@
                   Intl.NumberFormat().format(price3)
                 }}</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog5" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>
@@ -396,7 +396,7 @@
               <v-col class="py-0" cols="3">
                 <span class="font-weight-bold">{{ discount3 }}%</span>
               </v-col>
-              <v-col cols="3" class="py-0">
+              <v-col cols="3">
                 <v-dialog v-model="dialog6" persistent max-width="600px">
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon small v-bind="attrs" v-on="on">mdi-pencil</v-icon>

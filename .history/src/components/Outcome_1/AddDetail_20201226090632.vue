@@ -295,7 +295,7 @@
         </template>
         <v-card>
           <v-card-title>
-            Save successful
+            Save successfu
           </v-card-title>
           <v-card-text>
             <v-icon large color="green">mdi-check</v-icon></v-card-text

@@ -155,14 +155,12 @@ export default {
       ],
     };
   },
-  methods: {
-    goImport() {
-      // force browser reload
-      location.reload();
-    },
-  },
+  methods: {},
   created() {
     this.id = this.$store.getters.generateImage;
+  },
+  goImport() {
+    this.$router.push("Import");
   },
 };
 </script>

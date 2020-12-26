@@ -295,13 +295,11 @@
         </template>
         <v-card>
           <v-card-title>
-            Save successful
+            Notification
           </v-card-title>
-          <v-card-text>
-            <v-icon large color="green">mdi-check</v-icon></v-card-text
-          >
-          <v-card-text class="text-start">
-            Do you want to add new product with this template?
+          <v-card-text class="text-start"
+            >Your template has been save successfully! <br />
+            Do you want to use this template?
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
@@ -311,15 +309,16 @@
               class="blue-grey--text px-8"
               style="text-transform:none"
             >
-              No
+              Cancel
             </v-btn>
+
             <v-btn
               color="blue darken-1"
               class="white--text  px-8"
               @click="dialog = false"
               style="text-transform:none"
             >
-              Yes
+              Add
             </v-btn>
           </v-card-actions>
         </v-card>

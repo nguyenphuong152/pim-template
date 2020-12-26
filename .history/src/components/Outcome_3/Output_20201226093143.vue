@@ -157,7 +157,6 @@ export default {
   },
   methods: {
     goImport() {
-      // force browser reload
       location.reload();
     },
   },

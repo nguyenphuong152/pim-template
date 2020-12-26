@@ -41,8 +41,7 @@
           </v-col>
           <v-col cols="4">
             <v-text-field
-              v-model="myInputModel"
-              v-mask="'##/##/####'"
+              v-model="datee"
               hint="Input date. Ex: 26122020"
             ></v-text-field>
           </v-col>
@@ -182,7 +181,6 @@
 <script>
 export default {
   data: () => ({
-    myInputModel: "",
     checkbox: false,
     items: [
       {
@@ -229,6 +227,15 @@ export default {
       }
 
       return selections;
+    },
+    datee() {
+      return (
+        this.datee.slice(0, 2) +
+        "/" +
+        this.datee.slice(2, 4) +
+        "/" +
+        this.datee.slice(4)
+      );
     },
   },
   watch: {

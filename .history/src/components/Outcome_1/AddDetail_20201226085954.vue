@@ -295,12 +295,10 @@
         </template>
         <v-card>
           <v-card-title>
-            Save successful
+            Notification
           </v-card-title>
-          <v-card-text>
-            <v-icon large color="green">mdi-check</v-icon></v-card-text
-          >
-          <v-card-text class="text-start">
+          <v-card-text class="text-start"
+            >Your template has been save successfully. <br />
             Do you want to add new product with this template?
           </v-card-text>
           <v-card-actions>

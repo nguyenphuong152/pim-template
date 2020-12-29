@@ -105,7 +105,7 @@
               <template>
                 <v-row no-gutters>
                   <v-col cols="4">
-                    <span>Flavor</span>
+                    <span>Size</span>
                   </v-col>
                 </v-row>
               </template>
@@ -113,7 +113,7 @@
             <v-expansion-panel-content>
               <v-row class="align-baseline">
                 <v-col cols="6">
-                  <span>Number of flavor</span>
+                  <span>Number of size</span>
                 </v-col>
                 <v-col>
                   <v-text-field
@@ -179,7 +179,7 @@ export default {
       title: "",
       countSelection: "",
       options: [],
-      templateName: "Drink",
+      templateName: "Sneaker",
     };
   },
   methods: {

@@ -52,6 +52,8 @@ export default {
       this.show = !this.show;
     },
     getNameTemplate(name) {
+      this.$store.dispatch("deleteListTemplate");
+      this.$store.dispatch("rerenderComponent");
       this.name = name;
       this.show = !this.show;
     },

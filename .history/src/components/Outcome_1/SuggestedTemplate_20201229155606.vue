@@ -402,20 +402,20 @@ export default {
       });
     },
     check(name1) {
-      console.log(this.getListComponent);
-      if (this.getListComponent == 0) {
+      if (this.getListComponent === undefined) {
         console.log("vo ne");
         this.dialog = false;
         this.seeDetail(name1);
       } else {
         console.log("vo");
         this.dialog = true;
+        this.seeDetailReset(name1);
       }
     },
   },
   computed: {
     getListComponent() {
-      return this.$store.getters.listComponent.length;
+      return this.$store.getters.getListComponent;
     },
     setHeight() {
       if (

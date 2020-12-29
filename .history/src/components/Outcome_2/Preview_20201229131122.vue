@@ -49,7 +49,6 @@
             <v-row>
               <v-container class="py-0 px-0">
                 <v-btn
-                  depressed
                   color="blue-grey "
                   class="ma-2 white--text"
                   style="text-transform:none"
@@ -185,7 +184,6 @@
             <v-row>
               <v-container class="py-0 px-0">
                 <v-btn
-                  depressed
                   color="blue-grey "
                   class="ma-2 white--text"
                   style="text-transform:none"
@@ -321,7 +319,6 @@
             <v-row>
               <v-container class="py-0 px-0">
                 <v-btn
-                  depressed
                   color="blue-grey "
                   class="ma-2 white--text"
                   style="text-transform:none"

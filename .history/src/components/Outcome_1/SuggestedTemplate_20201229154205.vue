@@ -239,7 +239,7 @@
           </v-dialog>
         </v-col>
         <v-col cols="3">
-          <v-card color="#f0f8ff" @click="check(name2)" width="200">
+          <v-card color="#f0f8ff" @click="dialog1 = true" width="200">
             <v-card-text class="blue--text font-weight-bold">
               {{ name2 }}
             </v-card-text>
@@ -283,7 +283,7 @@
           </v-dialog>
         </v-col>
         <v-col cols="3">
-          <v-card color="#f0f8ff" @click="check(name3)" width="200">
+          <v-card color="#f0f8ff" @click="dialog2 = true" width="200">
             <v-card-text class="blue--text font-weight-bold">
               {{ name3 }}
             </v-card-text>
@@ -327,7 +327,7 @@
           </v-dialog>
         </v-col>
         <v-col cols="3">
-          <v-card color="#f0f8ff" @click="check(name4)" width="200">
+          <v-card color="#f0f8ff" @click="dialog3 = true" width="200">
             <v-card-text class="blue--text font-weight-bold">
               {{ name4 }}
             </v-card-text>
@@ -402,20 +402,17 @@ export default {
       });
     },
     check(name1) {
-      console.log(this.getListComponent);
-      if (this.getListComponent == 0) {
-        console.log("vo ne");
-        this.dialog = false;
+      if (this.getLengthListComponent === "0") {
+        this.dialog = true;
         this.seeDetail(name1);
       } else {
-        console.log("vo");
-        this.dialog = true;
+        this.dialog = false;
       }
     },
   },
   computed: {
-    getListComponent() {
-      return this.$store.getters.listComponent.length;
+    getLengthListComponent() {
+      return this.$store.getters.getListComponent.length;
     },
     setHeight() {
       if (

@@ -132,8 +132,9 @@
           <v-col cols="7" class="px-0">
             <v-container class="py-0 px-0">
               <v-btn
-                color="blue-grey"
+                color="blue"
                 depressed
+                outlined
                 class="ma-2 white--text"
                 style="text-transform:none"
               >

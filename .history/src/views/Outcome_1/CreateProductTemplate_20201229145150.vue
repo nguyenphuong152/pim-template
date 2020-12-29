@@ -7,7 +7,7 @@
         <SuggestedTemplate @nameTemplate="getNameTemplate" :checkNull="name" />
         <br />
         <SneakerTemplate v-if="name === 'Sneaker'" />
-        <SportingTemplate v-if="name === 'Sporting'" />
+        <SportingTemplate v-if="name === 'Sporting'" :key="getKey" />
         <NoodleTemplate v-if="name === 'Noodle'" />
         <DrinkTemplate v-if="name === 'Drink'" />
 
@@ -52,6 +52,8 @@ export default {
       this.show = !this.show;
     },
     getNameTemplate(name) {
+      this.$store.dispatch("deleteListTemplate");
+      this.$store.dispatch("rerenderComponent");
       this.name = name;
       this.show = !this.show;
     },

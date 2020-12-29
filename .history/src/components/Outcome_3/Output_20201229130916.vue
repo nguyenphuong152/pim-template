@@ -38,8 +38,7 @@
         Close
       </v-btn>
       <v-btn
-        depressed
-        color="blue darken-1"
+        color="green darken-1"
         style="text-transform:none"
         class="ma-2 white--text px-8"
         @click="goImport()"

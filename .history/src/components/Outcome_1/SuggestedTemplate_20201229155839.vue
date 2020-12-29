@@ -410,6 +410,7 @@ export default {
       } else {
         console.log("vo");
         this.dialog = true;
+        this.seeDetailReset(name1);
       }
     },
   },

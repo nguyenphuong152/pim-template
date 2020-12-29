@@ -403,13 +403,14 @@ export default {
     },
     check(name1) {
       console.log(this.getListComponent);
-      if (this.getListComponent == 0) {
+      if (this.getListComponent === "0") {
         console.log("vo ne");
         this.dialog = false;
         this.seeDetail(name1);
       } else {
         console.log("vo");
         this.dialog = true;
+        this.seeDetailReset(name1);
       }
     },
   },

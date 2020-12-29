@@ -49,7 +49,6 @@
             <v-row>
               <v-container class="py-0 px-0">
                 <v-btn
-                  depressed
                   color="blue-grey "
                   class="ma-2 white--text"
                   style="text-transform:none"
@@ -185,7 +184,6 @@
             <v-row>
               <v-container class="py-0 px-0">
                 <v-btn
-                  depressed
                   color="blue-grey "
                   class="ma-2 white--text"
                   style="text-transform:none"
@@ -321,7 +319,6 @@
             <v-row>
               <v-container class="py-0 px-0">
                 <v-btn
-                  depressed
                   color="blue-grey "
                   class="ma-2 white--text"
                   style="text-transform:none"
@@ -446,7 +443,6 @@
             <v-col cols="8"></v-col>
             <v-col>
               <v-btn
-                depressed
                 color="#EEEEEE"
                 class="ma-2 blue-grey--text px-8"
                 @click="goBack()"
@@ -457,12 +453,11 @@
               <v-dialog v-model="dialog7" persistent max-width="400px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn
-                    color="blue darken-1"
+                    color="green darken-1"
                     style="text-transform:none"
                     class="ma-2 white--text px-8"
                     v-bind="attrs"
                     v-on="on"
-                    depressed
                   >
                     Save
                   </v-btn>

@@ -195,7 +195,7 @@
       </v-col>
       <v-row class="mx-4 hidden-sm-and-down">
         <v-col cols="3">
-          <v-card color="#f0f8ff" @click="check(name1)" width="200">
+          <v-card color="#f0f8ff" @click="check()" width="200">
             <v-card-text class="blue--text font-weight-bold">
               {{ name1 }}
             </v-card-text>
@@ -239,7 +239,7 @@
           </v-dialog>
         </v-col>
         <v-col cols="3">
-          <v-card color="#f0f8ff" @click="check(name2)" width="200">
+          <v-card color="#f0f8ff" @click="dialog1 = true" width="200">
             <v-card-text class="blue--text font-weight-bold">
               {{ name2 }}
             </v-card-text>
@@ -283,7 +283,7 @@
           </v-dialog>
         </v-col>
         <v-col cols="3">
-          <v-card color="#f0f8ff" @click="check(name3)" width="200">
+          <v-card color="#f0f8ff" @click="dialog2 = true" width="200">
             <v-card-text class="blue--text font-weight-bold">
               {{ name3 }}
             </v-card-text>
@@ -327,7 +327,7 @@
           </v-dialog>
         </v-col>
         <v-col cols="3">
-          <v-card color="#f0f8ff" @click="check(name4)" width="200">
+          <v-card color="#f0f8ff" @click="dialog3 = true" width="200">
             <v-card-text class="blue--text font-weight-bold">
               {{ name4 }}
             </v-card-text>
@@ -401,21 +401,17 @@ export default {
         this.$emit("nameTemplate", name);
       });
     },
-    check(name1) {
-      console.log(this.getListComponent);
-      if (this.getListComponent == 0) {
-        console.log("vo ne");
-        this.dialog = false;
-        this.seeDetail(name1);
-      } else {
-        console.log("vo");
+    check() {
+      if (this.getListComponent === []) {
         this.dialog = true;
+      } else {
+        this.dialog = false;
       }
     },
   },
   computed: {
     getListComponent() {
-      return this.$store.getters.listComponent.length;
+      return this.$store.getters.getListComponent;
     },
     setHeight() {
       if (

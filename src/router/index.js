@@ -19,7 +19,7 @@ const routes = [
     name: "Template",
     component: Template,
     meta: {
-      title: "Add Template",
+      title: "Template",
     },
   },
   {

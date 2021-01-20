@@ -34,7 +34,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title class="logo">
-                Eim
+                E<span class="red--text">i</span>m
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>

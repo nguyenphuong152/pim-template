@@ -3,7 +3,9 @@
     <v-card height="80" flat class="hidden-md-and-up align-baseline">
       <v-row style="height:0px">
         <v-col class="px-0" cols="3">
-          <span class="logo text-start"> Eim</span>
+          <span class="logo text-start">
+            Eim
+          >
         </v-col>
         <v-col>
           <div class="text-end">
@@ -34,7 +36,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title class="logo">
-                Eim
+                E<span class="red--text">i</span>m
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>

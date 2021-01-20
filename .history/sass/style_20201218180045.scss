@@ -1,6 +1,5 @@
-$font-primary: 'Open Sans';
-$font-logo: 'Lobster';
-
+$font-primary: 'Open Sans',
+sans-serif;
 
 @import "~vuetify/src/styles/styles.sass";
 
@@ -9,11 +8,11 @@ $fontsize-title: 24px;
 $fontsize-logo:36px;
 $fontsize-header:22px;
 $fontsize-nav:20px;
-
+ 
 
 #app {
   font-family: $font-primary;
-  font-size: $fontsize-content;
+   font-size:$fontsize-content;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -39,10 +38,9 @@ $fontsize-nav:20px;
 }
 
 .logo {
-  font-family: $font-logo !important;
-  font-weight: 500 !important;
+  @extend .title;
+  font-weight: 700 !important;
   font-size: $fontsize-logo !important;
-  color: #ff4848;
 }
 
 .text-header {

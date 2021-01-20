@@ -1,6 +1,6 @@
-$font-primary: 'Open Sans';
-$font-logo: 'Lobster';
-
+$font-primary: 'Open Sans',
+$font-logo: 'Lobster'
+sans-serif;
 
 @import "~vuetify/src/styles/styles.sass";
 
@@ -39,14 +39,13 @@ $fontsize-nav:20px;
 }
 
 .logo {
-  font-family: $font-logo !important;
-  font-weight: 500 !important;
+  @extend .title;
+  font-weight: 700 !important;
   font-size: $fontsize-logo !important;
-  color: #ff4848;
 }
 
 .text-header {
-  font: $font-primary !important;
+  font: $font-logo !important;
   font-size: $fontsize-header !important;
   font-weight: 700;
 }

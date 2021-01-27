@@ -3,7 +3,7 @@
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="title text-start">
-          <v-icon>mdi-keyboard-arrow-right</v-icon>
+          <v-icon>mdi-chervon-right</v-icon>
           Your template
         </v-list-item-title>
       </v-list-item-content>

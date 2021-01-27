@@ -16,7 +16,7 @@
                   v-for="(item, index) in items"
                   :key="index"
                   :to="item.path"
-                  color="blue"
+                  color="#FF4848"
                 >
                   <v-list-item-title class="text-start">{{
                     item.title

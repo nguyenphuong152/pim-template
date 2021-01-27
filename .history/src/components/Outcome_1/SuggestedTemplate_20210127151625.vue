@@ -21,7 +21,7 @@
             <v-card-text style="height:500px;">
               <v-col>
                 <v-card color="white" @click="check(name1)" width="200">
-                  <v-card-text class="black--text font-weight-bold">
+                  <v-card-text class="blue--text font-weight-bold">
                     {{ name1 }}
                   </v-card-text>
                 </v-card>
@@ -64,8 +64,8 @@
                 </v-dialog>
               </v-col>
               <v-col>
-                <v-card color="white" @click="check(name2)" width="200">
-                  <v-card-text class="black--text font-weight-bold">
+                <v-card color="#f0f8ff" @click="check(name2)" width="200">
+                  <v-card-text class="blue--text font-weight-bold">
                     {{ name2 }}
                   </v-card-text>
                 </v-card>
@@ -108,8 +108,8 @@
                 </v-dialog>
               </v-col>
               <v-col>
-                <v-card color="white" @click="check(name3)" width="200">
-                  <v-card-text class="black--text font-weight-bold">
+                <v-card color="#f0f8ff" @click="check(name3)" width="200">
+                  <v-card-text class="blue--text font-weight-bold">
                     {{ name3 }}
                   </v-card-text>
                 </v-card>
@@ -149,8 +149,8 @@
                 </v-dialog>
               </v-col>
               <v-col>
-                <v-card color="white" @click="check(name4)" width="200">
-                  <v-card-text class="black--text font-weight-bold">
+                <v-card color="#f0f8ff" @click="check(name4)" width="200">
+                  <v-card-text class="blue--text font-weight-bold">
                     {{ name4 }}
                   </v-card-text>
                 </v-card>

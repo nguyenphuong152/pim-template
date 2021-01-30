@@ -309,7 +309,7 @@
               @click="dialog = false"
               style="text-transform:none"
             >
-              Create new one
+              Close
             </v-btn>
             <v-btn
               color="red darken-1"

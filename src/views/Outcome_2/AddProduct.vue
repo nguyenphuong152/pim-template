@@ -371,7 +371,7 @@
                 @click="dialog = false"
                 style="text-transform:none"
               >
-                Cancel
+                Close
               </v-btn>
             </v-card-actions>
           </v-card>

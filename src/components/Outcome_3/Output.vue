@@ -36,7 +36,7 @@
         @click="goBack()"
         style="text-transform:none"
       >
-        Close
+        Cancel
       </v-btn>
       <v-dialog v-model="dialog" :width="setWidth">
         <template v-slot:activator="{ on, attrs }">

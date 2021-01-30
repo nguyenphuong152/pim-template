@@ -180,8 +180,7 @@
                       Saved successfully
                     </v-card-title>
                     <v-card-text class="text-start"
-                      >You can use it now or go back to create another
-                      one</v-card-text
+                      >Go to see your product now</v-card-text
                     >
                     <v-card-actions>
                       <v-spacer></v-spacer>
@@ -191,7 +190,7 @@
                         @click="dialog = false"
                         style="text-transform:none"
                       >
-                        Cancel
+                        Close
                       </v-btn>
                     </v-card-actions>
                   </v-card>

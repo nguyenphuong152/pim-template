@@ -44,6 +44,7 @@
                 color="blue darken-2"
                 label="Base price"
                 hint="180,000"
+                v-mask="'###.###.###'"
                 required
               ></v-text-field>
             </v-container>
@@ -62,6 +63,7 @@
                 color="blue darken-2"
                 label="Retail price"
                 hint="180,000"
+                v-mask="'###.###.###'"
                 required
               ></v-text-field>
             </v-container>

@@ -45,6 +45,7 @@
                 label="Base price"
                 hint="180.000"
                 v-mask="mask"
+                v-model="currencyModel1"
                 required
               ></v-text-field>
             </v-container>
@@ -64,6 +65,7 @@
                 label="Retail price"
                 hint="180.000"
                 v-mask="mask"
+                v-model="currencyModel"
                 required
               ></v-text-field>
             </v-container>
@@ -197,14 +199,16 @@
 <script>
 import createNumberMask from "text-mask-addons/dist/createNumberMask";
 const currencyMask = createNumberMask({
+  prefix: "",
   allowDecimal: true,
   includeThousandsSeparator: true,
   allowNegative: false,
 });
-
 export default {
-  mask: currencyMask,
   data: () => ({
+    mask: currencyMask,
+    currencyModel: "",
+    currencyModel1: "",
     items: ["VND", "USD", "EUR"],
     templateName: "",
     template: [],
